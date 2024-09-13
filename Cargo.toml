@@ -1,0 +1,20 @@
+[package]
+name = "mylzo"
+version = "0.1.0"
+edition = "2021"
+authors = ["Saumil Shah"]
+description = "lzo1z wrapper"
+license = "MIT"
+
+[lib]
+name = "mylzo"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "0.2.158"
+
+[build-dependencies]
+cc = "1.0"
+
+[build]
+script = "build.rs"
