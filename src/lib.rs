@@ -10,7 +10,7 @@ extern "C" {
         work_mem: *mut c_void,
     ) -> c_int;
 
-    pub fn lzo1z_decompress(
+    pub fn lzo1z_decompress_safe(
         src: *const u8,
         src_len: libc::size_t,
         dst: *mut u8,
@@ -47,7 +47,7 @@ pub fn decompress(input: &[u8], output: &mut [u8]) -> Result<usize, String> {
     let mut work_mem = vec![0; 4096]; // Adjust size if needed
 
     let res = unsafe {
-        lzo1z_decompress(
+        lzo1z_decompress_safe(
             input.as_ptr(),
             input.len() as size_t,
             output.as_mut_ptr(),

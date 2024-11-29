@@ -1,6 +1,6 @@
 [package]
 name = "mylzo"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Saumil Shah"]
 description = "lzo1z wrapper"

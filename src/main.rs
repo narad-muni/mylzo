@@ -1,3 +1,7 @@
+use mylzo::decompress;
+
 fn main() {
-    println!("Hello");
+    let out = decompress(&[], &mut []);
+
+    println!("{out:?}");
 }
