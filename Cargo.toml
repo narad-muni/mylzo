@@ -11,7 +11,7 @@ name = "mylzo"
 path = "src/lib.rs"
 
 [dependencies]
-libc = "0.2.158"
+libc = "0.2.168"
 
 [build-dependencies]
 cc = "1.0"
